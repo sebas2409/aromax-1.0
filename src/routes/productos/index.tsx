@@ -2,7 +2,7 @@ import {createFileRoute} from '@tanstack/react-router'
 import PerfumeCard from "../../components/PerfumeCard.tsx";
 import perfumes from '../../assets/final.json';
 import {Autocomplete, AutocompleteItem, Input, Pagination} from "@nextui-org/react";
-import {useCallback, useEffect, useMemo, useState} from "react";
+import {Key, useCallback, useEffect, useMemo, useState} from "react";
 
 export const Route = createFileRoute('/productos/')({
     component: () => ProductsPage()
@@ -101,28 +101,27 @@ function ProductsPage() {
         }
     }, []);
 
-    const handleBrandChange = useCallback((value: string) => {
-        if (value) {
-            setBrandValue(value);
+    const handleBrandChange = useCallback((key: Key | null) => {
+        if (key) {
+            setBrandValue(key as string);
             setPage(1);
         } else {
             setBrandValue("");
         }
     }, [])
 
-    const handleFraganceTypeChange = useCallback((value: string) => {
-        if (value) {
-            setFraganceValue(value);
+    const handleFraganceTypeChange = useCallback((key: Key | null) => {
+        if (key) {
+            setFraganceValue(key as string);
             setPage(1);
         } else {
             setFraganceValue("");
         }
     }, [])
 
-    const handleNotesChange = useCallback((value: string) => {
-        console.log(value)
-        if (value) {
-            setNotesValue(value);
+    const handleNotesChange = useCallback((key: Key | null) => {
+        if (key) {
+            setNotesValue(key as string);
             setPage(1);
         } else {
             setNotesValue("");
@@ -161,7 +160,7 @@ function ProductsPage() {
                     <Autocomplete
                         label="Marca"
                         className="max-w-xs"
-                        onValueChange={handleBrandChange}
+                        onSelectionChange={handleBrandChange}
                         onClear={() => setBrandValue("")}
                     >
                         {
@@ -175,8 +174,7 @@ function ProductsPage() {
                     <Autocomplete
                         label="Tipo de fragancia"
                         className="max-w-xs"
-                        onClear={() => setFraganceValue("")}
-                        onValueChange={handleFraganceTypeChange}
+                        onSelectionChange={handleFraganceTypeChange}
                     >
                         {
                             Array.from(fraganceTypes).map((brand) => (
@@ -189,7 +187,7 @@ function ProductsPage() {
                     <Autocomplete
                         label="Notas"
                         className="max-w-xs"
-                        onValueChange={handleNotesChange}
+                        onSelectionChange={handleNotesChange}
                     >
                         {
                             Array.from(notes).map((brand) => (
