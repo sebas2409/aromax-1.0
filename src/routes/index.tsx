@@ -9,6 +9,7 @@ import floral from '../assets/floral.webp'
 import fruit from '../assets/fruit2.webp'
 import madera from '../assets/madera.webp'
 import Genres from "../components/GenresCards.tsx";
+import {ImagesSlider} from "../components/ImageSlider.tsx";
 
 export const Route = createFileRoute('/')({
     component: () => Home()
@@ -40,7 +41,44 @@ function Home() {
                 </div>
             </div>
             <div className='container'>
+                <div className='grid grid-cols-2 gap-8 items-center justify-center'>
+                    <ImagesSlider className='h-[600px]' images={[
+                        "https://assets.lummi.ai/assets/QmYhyyWPc5afAMP8vYcKPFB8t8KEkDftsJiDQQt877xfeZ?auto=format&w=1500",
+                        "https://assets.lummi.ai/assets/QmZzpXuduf38WUqfEkTuyXAeHBxWAVRJ82q12tYGNUtQq2?auto=format&w=1500",
+                        "https://assets.lummi.ai/assets/QmWdTiE58QHXefLcRNKCRi5pHbuUdDdFnujvhpJRfcNbzN?auto=format&w=1500",
+                    ]} children={
+                        <p></p>
+                    }/>
+                    <div>
+                        <h2 className="text-center my-4 cards-parfum">
+                            ¿Qué hace nuestra marca tan especial?
+                        </h2>
+                        <p>
+                            En nuestra empresa, creemos que la esencia de un perfume va más
+                            allá de su aroma; es una experiencia sensorial que cuenta una
+                            historia única. Nuestra pasión por la perfumería nos impulsa a
+                            buscar las mejores materias primas, combinando tradición y
+                            modernidad para crear fragancias que evocan emociones y recuerdos
+                            inolvidables.
+                        </p>
+                        <br/>
+                        <p>
+                            Nos dedicamos a innovar constantemente, trabajando de la mano con
+                            expertos perfumistas y artistas creativos para desarrollar
+                            colecciones que reflejen la diversidad y riqueza de nuestras
+                            culturas. Cada botella es un reflejo de nuestro compromiso con la
+                            calidad y la artesanía, diseñada para ser no solo un accesorio,
+                            sino una extensión de la personalidad de quien la lleva.
+                        </p>
+                    </div>
+                </div>
+                <h2 className="text-center my-4 cards-parfum">
+                    Géneros de fragancias
+                </h2>
                 <Genres/>
+                <h2 className="text-center cards-parfum">
+                    Familias olfativas
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
                     <Cards title="oriental" source={oriental} alt="oriental"/>
                     <Cards title="biscuit" source={biscuit} alt="biscuit"/>
@@ -49,7 +87,6 @@ function Home() {
                     <Cards title="fruit" source={fruit} alt="fruit"/>
                     <Cards title="madera" source={madera} alt="madera"/>
                 </div>
-
             </div>
         </>
     )

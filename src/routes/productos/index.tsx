@@ -131,10 +131,10 @@ function ProductsPage() {
     return (
         <div className='container'>
             <div className="flex flex-col items-center justify-center">
-                <h1 className="my-4">LOS MEJORES PERFUMES</h1>
+                <h1 className="my-4 cards-parfum">LOS MEJORES PERFUMES</h1>
                 <PerfumeCard perfumes={only6}/>
 
-                <h2 className='my-8'>CATÁLOGO</h2>
+                <h2 className='my-8 cards-parfum'>CATÁLOGO</h2>
                 <div className='flex gap-12 mb-8'>
                     <Input
                         type="text"

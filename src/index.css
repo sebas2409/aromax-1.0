@@ -2,10 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Linotype';
+    src: local('Linotype Didot Std Bold Italic'), local('Linotype-Didot-Std-Bold-Italic'),
+    url('./fonts/DidotLTStd-BoldItalic.ttf') format('truetype'),
+    url('./fonts/DidotLTStd-BoldItalic.woff') format('woff'),
+    url('./fonts/DidotLTStd-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Linotype Didot';
+    src: local('Linotype Didot Pro Roman'), local('Linotype-Didot-Pro-Roman'),
+    url('./fonts/DidotLTPro-Roman.woff') format('woff'),
+    url('./fonts/DidotLTPro-Roman.woff2') format('woff2'),
+    url('./fonts/DidotLTPro-Roman.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 .container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cards-parfum {
+    font-family: 'Linotype Didot', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    /*border-bottom: 2px solid black;*/
+    /*padding-bottom: 0.5rem;*/
+    /*margin-bottom: 2rem;*/
 }
 
