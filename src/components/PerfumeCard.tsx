@@ -1,9 +1,10 @@
 import {Button, Card, CardBody, CardFooter, Image} from "@nextui-org/react";
 import {Perfume} from "../interfaces/perfume.ts";
 import {motion} from "framer-motion";
+import {useCartStore} from "../state/cartStore.ts";
 
 const PerfumeCard = ({perfumes}: { perfumes: Perfume[] }) => {
-
+    const {addPerfume} = useCartStore()
     return (
         <>
             <div className="gap-8 grid grid-cols-2 sm:grid-cols-4">
@@ -12,7 +13,6 @@ const PerfumeCard = ({perfumes}: { perfumes: Perfume[] }) => {
                         <Card
                             shadow="sm"
                             className='w-[200px]'
-                            onClick={() => console.log("item pressed")}
                         >
                             <CardBody className="p-1">
                                 <div className="flex items-center justify-between px-1.5 py-1">
@@ -20,7 +20,9 @@ const PerfumeCard = ({perfumes}: { perfumes: Perfume[] }) => {
                                     <motion.div whileHover={{
                                         scale: 1.1,
                                     }}>
-                                        <Button isIconOnly color="default" aria-label="Like" variant='light'>
+                                        <Button isIconOnly color="default" aria-label="Like" variant='light' onClick={() => {
+                                            addPerfume(item)
+                                        }}>
                                             <svg width={22} height={22} viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
