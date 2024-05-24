@@ -13,7 +13,7 @@ export default function ShoppingCartModal({isOpen, onOpen, onClose}: {
     onClose: () => void
 }) {
 
-    const {perfums} = useCartStore()
+    const {perfums, removePerfume} = useCartStore()
     const totalAmount = perfums.reduce((acc, item) => acc + item.price, 0)
     return (
         <>
@@ -78,6 +78,7 @@ export default function ShoppingCartModal({isOpen, onOpen, onClose}: {
                                                                 <button
                                                                     type="button"
                                                                     className="flex items-center px-2 py-1 pl-0 space-x-1"
+                                                                    onClick={() => removePerfume(item)}
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -144,14 +145,14 @@ export default function ShoppingCartModal({isOpen, onOpen, onClose}: {
                                         <Button
                                             radius="full"
                                             className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-                                            // onClick={() => navigate("/productos")}
+                                            onClick={() => onClose()}
                                         >
                                             Volver a la tienda
                                         </Button>
                                         <Button
                                             radius="full"
                                             className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-                                            // onClick={() => navigate("/pago")}
+                                            onClick={() => onClose()}
                                         >
                       <span className="sr-only sm:not-sr-only">
                         Continuar con el
