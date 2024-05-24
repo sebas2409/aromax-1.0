@@ -33,9 +33,9 @@ function Home() {
                 <div
                     className="absolute w-full h-full flex flex-col justify-center items-center gap-[70px] text-center text-white">
                     <div className="h-[40rem] flex justify-center items-center px-4">
-                        <div className="text-5xl mx-auto font-bold text-white dark:text-neutral-400">
-                            <FlipWords words={words} duration={3000}/> <br/>
-                            el arte de la perfumería a tu medida.
+                        <div className="text-5xl mx-auto font-bold text-white">
+                            <FlipWords words={words} duration={1500}/> <br/>
+                            <span className='title-1'>el arte de la perfumería a tu medida.</span>
                         </div>
                     </div>
                 </div>

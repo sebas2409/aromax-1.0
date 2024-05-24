@@ -48,7 +48,7 @@ export default function ShoppingCartModal({isOpen, onOpen, onClose}: {
                                     <h2 className="text-xl font-semibold">Tu carrito</h2>
                                     <ul className="flex flex-col divide-y dark:divide-gray-300">
                                         {
-                                            perfums.map((item, index) => {
+                                            perfums.map((item) => {
                                                 return (
                                                     <li className="flex flex-col py-6 sm:flex-row sm:justify-between">
                                                     <div className="flex w-full space-x-2 sm:space-x-4">

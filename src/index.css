@@ -13,7 +13,7 @@
 }
 
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins";
     font-weight: 400;
     font-style: normal;
     box-sizing: border-box;
@@ -37,12 +37,19 @@
 }
 
 .cards-parfum {
-    font-family: 'Linotype Didot', serif;
+    font-family: 'Linotype Didot';
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
     /*border-bottom: 2px solid black;*/
     /*padding-bottom: 0.5rem;*/
     /*margin-bottom: 2rem;*/
+}
+
+.title-1 {
+    font-family: 'Linotype Didot';
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
