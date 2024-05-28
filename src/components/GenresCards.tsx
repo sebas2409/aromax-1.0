@@ -4,7 +4,7 @@ import {useNavigate} from "@tanstack/react-router";
 export default function Genres() {
     const router = useNavigate();
     return (
-        <div className="flex justify-center items-center h-full">
+        <div className="flex justify-center items-center h-full mt-[40px]">
             {/* Contenedor de tarjetas */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
                 {/* Primera tarjeta */}

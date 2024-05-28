@@ -10,6 +10,8 @@ import fruit from '../assets/fruit2.webp'
 import madera from '../assets/madera.webp'
 import Genres from "../components/GenresCards.tsx";
 import {ImagesSlider} from "../components/ImageSlider.tsx";
+import Newsletter from "../components/Newsletter.tsx";
+import Info from "../components/Info.tsx";
 
 export const Route = createFileRoute('/')({
     component: () => Home()
@@ -40,7 +42,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className='container'>
+            <div className='container flex flex-col gap-5'>
                 <div className='grid grid-cols-2 gap-8 items-center justify-center'>
                     <ImagesSlider className='h-[600px]' images={[
                         "https://assets.lummi.ai/assets/QmYhyyWPc5afAMP8vYcKPFB8t8KEkDftsJiDQQt877xfeZ?auto=format&w=1500",
@@ -72,11 +74,11 @@ function Home() {
                         </p>
                     </div>
                 </div>
-                <h2 className="text-center my-4 cards-parfum">
+                <h2 className="text-center mt-[100px] cards-parfum">
                     Géneros de fragancias
                 </h2>
                 <Genres/>
-                <h2 className="text-center cards-parfum">
+                <h2 className="text-center cards-parfum mt-[100px]">
                     Familias olfativas
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
@@ -87,6 +89,8 @@ function Home() {
                     <Cards title="fruit" source={fruit} alt="fruit"/>
                     <Cards title="madera" source={madera} alt="madera"/>
                 </div>
+                <Info/>
+                <Newsletter/>
             </div>
         </>
     )

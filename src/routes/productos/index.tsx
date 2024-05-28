@@ -3,6 +3,7 @@ import PerfumeCard from "../../components/PerfumeCard.tsx";
 import perfumes from '../../assets/final.json';
 import {Autocomplete, AutocompleteItem, Input, Pagination} from "@nextui-org/react";
 import {Key, useCallback, useEffect, useMemo, useState} from "react";
+import Banner from "../../components/Banner.tsx";
 
 export const Route = createFileRoute('/productos/')({
     component: () => ProductsPage()
@@ -129,83 +130,88 @@ function ProductsPage() {
     }, [])
 
     return (
-        <div className='container'>
-            <div className="flex flex-col items-center justify-center">
-                <h1 className="my-4 cards-parfum">LOS MEJORES PERFUMES</h1>
-                <PerfumeCard perfumes={only6}/>
+        <>
+            <Banner/>
+            <div className='container'>
 
-                <h2 className='my-8 cards-parfum'>CATÁLOGO</h2>
-                <div className='flex gap-12 mb-8'>
-                    <Input
-                        type="text"
-                        size='lg'
-                        placeholder="Euphoria"
-                        value={filterValue}
-                        onValueChange={onSearchChange}
-                        onClear={() => setFilterValue("")}
-                        startContent={
-                            <svg width={24} height={24} viewBox="0 0 24 24" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path
-                                        d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
-                                        stroke="#000000" strokeWidth="2" strokeLinecap="round"
-                                        strokeLinejoin="round"></path>
-                                </g>
-                            </svg>
-                        }
-                    />
-                    <Autocomplete
-                        label="Marca"
-                        className="max-w-xs"
-                        onSelectionChange={handleBrandChange}
-                        onClear={() => setBrandValue("")}
-                    >
-                        {
-                            Array.from(brands).map((brand) => (
-                                <AutocompleteItem key={brand} value={brand}>
-                                    {brand}
-                                </AutocompleteItem>
-                            ))
-                        }
-                    </Autocomplete>
-                    <Autocomplete
-                        label="Tipo de fragancia"
-                        className="max-w-xs"
-                        onSelectionChange={handleFraganceTypeChange}
-                    >
-                        {
-                            Array.from(fraganceTypes).map((brand) => (
-                                <AutocompleteItem key={brand} value={brand}>
-                                    {brand}
-                                </AutocompleteItem>
-                            ))
-                        }
-                    </Autocomplete>
-                    <Autocomplete
-                        label="Notas"
-                        className="max-w-xs"
-                        onSelectionChange={handleNotesChange}
-                    >
-                        {
-                            Array.from(notes).map((brand) => (
-                                <AutocompleteItem key={brand} value={brand}>
-                                    {brand}
-                                </AutocompleteItem>
-                            ))
-                        }
-                    </Autocomplete>
+                <div className="flex flex-col items-center justify-center">
+                    <h1 className="my-4 cards-parfum">LOS MEJORES PERFUMES</h1>
+                    <PerfumeCard perfumes={only6}/>
+
+                    <h2 className='my-8 cards-parfum'>CATÁLOGO</h2>
+                    <div className='flex gap-12 mb-8'>
+                        <Input
+                            type="text"
+                            size='lg'
+                            placeholder="Euphoria"
+                            value={filterValue}
+                            onValueChange={onSearchChange}
+                            onClear={() => setFilterValue("")}
+                            startContent={
+                                <svg width={24} height={24} viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                                            stroke="#000000" strokeWidth="2" strokeLinecap="round"
+                                            strokeLinejoin="round"></path>
+                                    </g>
+                                </svg>
+                            }
+                        />
+                        <Autocomplete
+                            label="Marca"
+                            className="max-w-xs"
+                            onSelectionChange={handleBrandChange}
+                            onClear={() => setBrandValue("")}
+                        >
+                            {
+                                Array.from(brands).map((brand) => (
+                                    <AutocompleteItem key={brand} value={brand}>
+                                        {brand}
+                                    </AutocompleteItem>
+                                ))
+                            }
+                        </Autocomplete>
+                        <Autocomplete
+                            label="Tipo de fragancia"
+                            className="max-w-xs"
+                            onSelectionChange={handleFraganceTypeChange}
+                        >
+                            {
+                                Array.from(fraganceTypes).map((brand) => (
+                                    <AutocompleteItem key={brand} value={brand}>
+                                        {brand}
+                                    </AutocompleteItem>
+                                ))
+                            }
+                        </Autocomplete>
+                        <Autocomplete
+                            label="Notas"
+                            className="max-w-xs"
+                            onSelectionChange={handleNotesChange}
+                        >
+                            {
+                                Array.from(notes).map((brand) => (
+                                    <AutocompleteItem key={brand} value={brand}>
+                                        {brand}
+                                    </AutocompleteItem>
+                                ))
+                            }
+                        </Autocomplete>
+                    </div>
+                    <div className='flex gap-8 justify-center items-center my-12'>
+                        <Pagination color='secondary' total={totalPages} page={page}
+                                    onChange={page1 => setPage(page1)}/>
+                    </div>
+                    <PerfumeCard perfumes={items}/>
                 </div>
                 <div className='flex gap-8 justify-center items-center my-12'>
-                    <Pagination total={totalPages} page={page} onChange={page1 => setPage(page1)}/>
+                    <Pagination color='secondary' total={totalPages} page={page} onChange={page1 => setPage(page1)}/>
                 </div>
-                <PerfumeCard perfumes={items}/>
             </div>
-            <div className='flex gap-8 justify-center items-center my-12'>
-                <Pagination total={totalPages} page={page} onChange={page1 => setPage(page1)}/>
-            </div>
-        </div>
+        </>
     )
 }

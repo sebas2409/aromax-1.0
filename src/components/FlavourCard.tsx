@@ -41,7 +41,7 @@ function Cards({title, source, alt}: { title: string, source: string, alt: strin
     return (
         <>
             <div
-                className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
+                className="py-6 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
                 <Card title={title}>
                     <Image source={source} alt={alt}/>
                 </Card>
