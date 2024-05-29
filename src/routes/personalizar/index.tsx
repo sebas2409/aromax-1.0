@@ -150,7 +150,7 @@ function Step2({onCustomize}: { onCustomize: (data: Step2DataProps) => void }) {
                             }`}
                             onClick={() => handleBottleSelection("frasco1")}
                         >
-                            <img src={pipetero} alt="Frasco 1"/>
+                            <img src={pipetero} alt="Frasco 1" className='w-[220px] h-[303px]'/>
                         </div>
                     </div>
                     <div>
@@ -163,7 +163,7 @@ function Step2({onCustomize}: { onCustomize: (data: Step2DataProps) => void }) {
                             }`}
                             onClick={() => handleBottleSelection("frasco2")}
                         >
-                            <img src={spray} alt="Frasco 2"/>
+                            <img src={spray} alt="Frasco 2" className='w-[220px] h-[303px]'/>
                         </div>
                     </div>
                 </div>
