@@ -53,7 +53,7 @@ function Home() {
                     }/>
                     <div>
                         <h2 className="text-center my-4 cards-parfum">
-                            ¿Qué hace nuestra marca tan especial?
+                            ¿Por qué Aromax es tan especial?
                         </h2>
                         <p>
                             En nuestra empresa, creemos que la esencia de un perfume va más
