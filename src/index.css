@@ -3,31 +3,36 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Linotype';
-    src: local('Linotype Didot Std Bold Italic'), local('Linotype-Didot-Std-Bold-Italic'),
-    url('./fonts/DidotLTStd-BoldItalic.ttf') format('truetype'),
-    url('./fonts/DidotLTStd-BoldItalic.woff') format('woff'),
-    url('./fonts/DidotLTStd-BoldItalic.woff2') format('woff2');
-    font-weight: 700;
-    font-style: italic;
+    font-family: 'Outfit Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/outfit:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/cormorant-garamond@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/cormorant-garamond@latest/latin-400-normal.woff) format('woff');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
 * {
-    font-family: "Poppins";
+    font-family: "Outfit Variable", serif;
     font-weight: 400;
     font-style: normal;
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'Linotype Didot';
-    src: local('Linotype Didot Pro Roman'), local('Linotype-Didot-Pro-Roman'),
-    url('./fonts/DidotLTPro-Roman.woff') format('woff'),
-    url('./fonts/DidotLTPro-Roman.woff2') format('woff2'),
-    url('./fonts/DidotLTPro-Roman.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+.video {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+
 }
+
 
 .container {
     max-width: 1280px;
@@ -37,19 +42,12 @@
 }
 
 .cards-parfum {
-    font-family: 'Linotype Didot';
+    font-family: 'Outfit Variable', sans-serif;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
     /*border-bottom: 2px solid black;*/
     /*padding-bottom: 0.5rem;*/
     /*margin-bottom: 2rem;*/
-}
-
-.title-1 {
-    font-family: 'Linotype Didot';
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 2rem;
 }
 

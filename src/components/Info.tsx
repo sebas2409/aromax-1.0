@@ -19,7 +19,7 @@ export default function Info(){
                             ></path>
                         </svg>
                         <div className="space-y-2">
-                            <p className="text-lg font-medium leading-snug">
+                            <p className="text-lg font-bold leading-snug">
                                 Descubre tu fragancia perfecta
                             </p>
                             <p className="leading-snug">
@@ -44,7 +44,7 @@ export default function Info(){
                             ></path>
                         </svg>
                         <div className="space-y-2">
-                            <p className="text-lg font-medium leading-snug">
+                            <p className="text-lg font-bold leading-snug">
                                 Calidad y Exclusividad
                             </p>
                             <p className="leading-snug">
@@ -69,7 +69,7 @@ export default function Info(){
                             ></path>
                         </svg>
                         <div className="space-y-2">
-                            <p className="text-lg font-medium leading-snug">
+                            <p className="text-lg font-bold leading-snug">
                                 AromaX Recommender
                             </p>
                             <p className="leading-snug">

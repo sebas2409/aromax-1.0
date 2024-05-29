@@ -52,7 +52,7 @@ const PerfumeCard = ({perfumes}: { perfumes: Perfume[] }) => {
                             <CardFooter className="text-small text-left">
                                 <div className="flex flex-col gap-2">
                                     <b>{item.name}</b>
-                                    <p className="text-default-500">${item.price}</p>
+                                    <p className="text-default-500">{item.price}€</p>
                                 </div>
                             </CardFooter>
                         </Card>

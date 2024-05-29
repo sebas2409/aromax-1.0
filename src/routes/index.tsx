@@ -35,9 +35,9 @@ function Home() {
                 <div
                     className="absolute w-full h-full flex flex-col justify-center items-center gap-[70px] text-center text-white">
                     <div className="h-[40rem] flex justify-center items-center px-4">
-                        <div className="text-5xl mx-auto font-bold text-white">
+                        <div className="text-5xl mx-auto font-bold text-white video">
                             <FlipWords words={words} duration={1500}/> <br/>
-                            <span className='title-1'>el arte de la perfumería a tu medida.</span>
+                            <span className='title-1 video'>el arte de la perfumería a tu medida.</span>
                         </div>
                     </div>
                 </div>

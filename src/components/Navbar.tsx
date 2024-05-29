@@ -12,6 +12,7 @@ import {useNavigate} from "@tanstack/react-router";
 import {useState} from "react";
 import {useCartStore} from "../state/cartStore.ts";
 import ShoppingCartModal from "./ShoppingCartModal.tsx";
+import icon from '../assets/icon.webp'
 
 export default function MyNavbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +43,8 @@ export default function MyNavbar() {
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         className="sm:hidden"
                     />
-                    <NavbarBrand>
+                    <NavbarBrand className='flex gap-5'>
+                        <img src={icon} alt='icon' className='w-[50px] h-[50px] rounded-lg'/>
                         <p className="font-bold text-inherit">Aromax</p>
                     </NavbarBrand>
                 </NavbarContent>

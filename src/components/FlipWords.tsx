@@ -52,7 +52,7 @@ export const FlipWords = ({words, duration = 3000}: { words: string[], duration:
                     scale: 2,
                     position: "absolute",
                 }}
-                className={'z-10 inline-block relative text-left text-white title-1 px-2 my-6'}
+                className={'z-10 inline-block relative text-left text-white title-1 px-2 my-6 video'}
                 key={currentWord}
             >
                 {currentWord.split("").map((letter, index) => (
@@ -64,7 +64,7 @@ export const FlipWords = ({words, duration = 3000}: { words: string[], duration:
                             delay: index * 0.08,
                             duration: 0.4,
                         }}
-                        className="inline-block title-1 text-8xl"
+                        className="inline-block title-1 text-8xl video"
                     >
                         {letter}
                     </motion.span>
